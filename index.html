@@ -1,139 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Discover the Hidden Secret!</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover the Hidden Secret!</title>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y6GHJY7J7"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-9Y6GHJY7J7');
-</script>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9Y6GHJY7J7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-9Y6GHJY7J7");
+    </script>
 
-<style>
-  html, body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    overflow-x: hidden;
-    overflow-y: auto;
-    min-height: 100vh;
-    background: url("https://gateway-v2.crakrevenue.com/crakrevenue-screenshot-collector/2.0/desktop/7809/0.jpg") no-repeat center top;
-    background-size: cover;
-    position: relative;
-  }
+    <style>
+      html,
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-height: 100vh;
+        background: url("https://gateway-v2.crakrevenue.com/crakrevenue-screenshot-collector/2.0/desktop/7809/0.jpg")
+          no-repeat center top;
+        background-size: cover;
+        position: relative;
+      }
 
-  .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
-    pointer-events: none;
-  }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        pointer-events: none;
+      }
 
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 150px 20px 20px 20px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 150px 20px 20px 20px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+      }
 
-  h1 {
-    font-size: 4em;
-    color: #ffcc00;
-    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
-    margin-bottom: 20px;
-    animation: glow 2s infinite alternate;
-  }
+      h1 {
+        font-size: 4em;
+        color: #ffcc00;
+        text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+        margin-bottom: 20px;
+        animation: glow 2s infinite alternate;
+      }
 
-  p {
-    font-size: 1.8em;
-    text-shadow: 0 0 15px #fff, 0 0 30px #fff;
-    margin-bottom: 40px;
-    animation: glow 2s infinite reverse;
-  }
+      p {
+        font-size: 1.8em;
+        text-shadow: 0 0 15px #fff, 0 0 30px #fff;
+        margin-bottom: 40px;
+        animation: glow 2s infinite reverse;
+      }
 
-  @keyframes glow {
-    0% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
-    50% { text-shadow: 0 0 25px #ffcc00, 0 0 50px #ffcc00; }
-    100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
-  }
+      @keyframes glow {
+        0% {
+          text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+        }
+        50% {
+          text-shadow: 0 0 25px #ffcc00, 0 0 50px #ffcc00;
+        }
+        100% {
+          text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+        }
+      }
 
-  .button {
-    padding: 20px 50px;
-    font-size: 1.5em;
-    color: #fff;
-    background-color: rgba(255,87,34,0.8);
-    text-decoration: none;
-    border-radius: 10px;
-    text-shadow: 0 0 5px #000;
-    transition: 0.3s;
-  }
+      .button {
+        padding: 20px 50px;
+        font-size: 1.5em;
+        color: #fff;
+        background-color: rgba(255, 87, 34, 0.8);
+        text-decoration: none;
+        border-radius: 10px;
+        text-shadow: 0 0 5px #000;
+        transition: 0.3s;
+      }
 
-  .button:hover {
-    background-color: rgba(255,87,34,1);
-  }
+      .button:hover {
+        background-color: rgba(255, 87, 34, 1);
+      }
 
-  /* إعلان جانبي */
-  .ad-side {
-    position: fixed;
-    top: 150px;
-    right: 0;
-    width: 120px;
-    z-index: 9999;
-  }
+      /* إعلان جانبي */
+      .ad-side {
+        position: fixed;
+        top: 150px;
+        right: 0;
+        width: 120px;
+        z-index: 9999;
+      }
 
-  /* إعلان أسفل الزر */
-  .ad-below {
-    width: 100%;
-    margin-top: 30px;
-    text-align: center;
-  }
+      /* إعلان أسفل الزر */
+      .ad-below {
+        width: 100%;
+        margin-top: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
 
-</style>
-</head>
+  <body>
+    <div class="overlay"></div>
 
-<body>
+    <!-- المحتوى المركزي -->
+    <div class="container">
+      <h1>Discover the Hidden Secret!</h1>
 
-<div class="overlay"></div>
+      <a
+        class="button"
+        href="https://t.crjmpy.com/332046/7809/0?bo=2753,2754,2755,2756&po=6456&aff_sub5=SF_006OG000004lmDN"
+        target="_blank"
+        >Discover Now</a
+      >
 
-<!-- المحتوى المركزي -->
-<div class="container">
-  <h1>Discover the Hidden Secret!</h1>
-  
-  <a class="button" href="https://t.crjmpy.com/332046/7809/0?bo=2753,2754,2755,2756&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">Discover Now</a>
+      <!-- إعلان أسفل الزر -->
+      <div class="ad-below">
+        <script
+          async="async"
+          data-cfasync="false"
+          src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"
+        ></script>
+        <div id="container-f3d91845de0abb12e3246eabd65ee3a1"></div>
+      </div>
+    </div>
 
-  <!-- إعلان أسفل الزر -->
-  <div class="ad-below">
-    <script async="async" data-cfasync="false" src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"></script>
-    <div id="container-f3d91845de0abb12e3246eabd65ee3a1"></div>
-  </div>
-</div>
+    <!-- إعلان جانبي أيمن -->
+    <div class="ad-side">
+      <script type="text/javascript">
+        atOptions = {
+          key: "c14e076b054eb3826671d248ad3a6b7b",
+          format: "iframe",
+          height: 600,
+          width: 120,
+          params: {},
+        };
+      </script>
+      <script
+        type="text/javascript"
+        src="//www.highperformanceformat.com/c14e076b054eb3826671d248ad3a6b7b/invoke.js"
+      ></script>
+    </div>
 
-<!-- إعلان جانبي أيمن -->
-<div class="ad-side">
-  <script type="text/javascript">
-    atOptions = { key: "c14e076b054eb3826671d248ad3a6b7b", format: "iframe", height: 600, width: 120, params: {} };
-  </script>
-  <script type="text/javascript" src="//www.highperformanceformat.com/c14e076b054eb3826671d248ad3a6b7b/invoke.js"></script>
-</div>
-
-<!-- موسيقى خلفية هادئة تبدأ عند أول لمسة -->
-<audio id="bgMusic" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monk_Turner__Fascinoma/Love_Hurts_Revisited/Monk_Turner__Fascinoma_-_01_-_A_Song_For_Her.mp3" loop></audio>
-
-<script>
-  // تشغيل الموسيقى عند أول لمسة
-  document.body.addEventListener('click', function() {
-    document.getElementById('bgMusic').play();
-  }, { once: true });
-</script>
-
-</body>
+    <!-- موسيقى خلفية هادئة تبدأ عند أول لمسة -->
+    <audio id="bgMusic" src="0.mp3" loop></audio>
+    <script>
+      document.body.addEventListener(
+        "click",
+        function () {
+          document.getElementById("bgMusic").play();
+        },
+        { once: true }
+      );
+    </script>
+  </body>
 </html>
-
