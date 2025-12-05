@@ -44,19 +44,7 @@ gtag('config', 'G-9Y6GHJY7J7');
     100% { background: rgba(0,0,0,0.4); }
   }
 
-  /* إعلان Adsterra ثابت في الأعلى */
-  .adsterra-fixed {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    width: 728px;
-    text-align: center;
-    background: transparent;
-    margin: 0;
-  }
-
+  /* نص وزر في منتصف الصفحة */
   .text-container {
     position: relative;
     z-index: 2;
@@ -65,7 +53,7 @@ gtag('config', 'G-9Y6GHJY7J7');
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 150px 20px 40px 20px;
+    padding: 150px 200px 40px 20px;
   }
 
   h1 {
@@ -103,25 +91,34 @@ gtag('config', 'G-9Y6GHJY7J7');
   .button:hover {
     background-color: rgba(255,87,34,1);
   }
+
+  /* إعلانات جانبية ذكية */
+  .side-ad {
+    position: fixed;
+    right: 0;
+    width: 160px;
+    text-align: center;
+    z-index: 9999;
+    display: none; /* ستظهر بواسطة الجافاسكربت */
+  }
+
+  .side-ad.top { top: 100px; }
+  .side-ad.bottom { bottom: 150px; }
 </style>
 </head>
 
 <body>
-
 <div class="overlay"></div>
 
-<!-- إعلان Adsterra ثابت أعلى الصفحة -->
-<div class="adsterra-fixed">
-<script type="text/javascript">
-atOptions = { key: "c14e076b054eb3826671d248ad3a6b7b", format: "iframe", height: 90, width: 728, params: {} };
-</script>
-<script type="text/javascript" src="//www.highperformanceformat.com/c14e076b054eb3826671d248ad3a6b7b/invoke.js"></script>
+<!-- إعلانات جانبية -->
+<div class="side-ad top">
+<script async src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"></script>
+<div id="container-f3d91845de0abb12e3246eabd65ee3a1-top"></div>
 </div>
 
-<!-- إعلان EffectiveGate أسفل الإعلان الأول -->
-<div style="width: 728px; margin: 120px auto 20px auto; text-align: center;">
-<script async="async" data-cfasync="false" src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"></script>
-<div id="container-f3d91845de0abb12e3246eabd65ee3a1"></div>
+<div class="side-ad bottom">
+<script async src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"></script>
+<div id="container-f3d91845de0abb12e3246eabd65ee3a1-bottom"></div>
 </div>
 
 <div class="text-container">
@@ -132,6 +129,31 @@ atOptions = { key: "c14e076b054eb3826671d248ad3a6b7b", format: "iframe", height:
 
 <!-- موسيقى خلفية رومانسية هادئة -->
 <audio id="bgMusic" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monk_Turner__Fascinoma/Love_Hurts_Revisited/Monk_Turner__Fascinoma_-_01_-_A_Song_For_Her.mp3" autoplay loop></audio>
+
+<script>
+// التحكم بظهور الإعلانات الذكية عند التمرير
+window.addEventListener('scroll', function() {
+  const topAd = document.querySelector('.side-ad.top');
+  const bottomAd = document.querySelector('.side-ad.bottom');
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const docHeight = document.body.scrollHeight;
+
+  // الإعلان العلوي يظهر عند منتصف الصفحة
+  if(scrollY > windowHeight / 2) {
+    topAd.style.display = 'block';
+  } else {
+    topAd.style.display = 'none';
+  }
+
+  // الإعلان السفلي يختفي عند الاقتراب من نهاية الصفحة (الزر)
+  if(scrollY + windowHeight < docHeight - 300) {
+    bottomAd.style.display = 'block';
+  } else {
+    bottomAd.style.display = 'none';
+  }
+});
+</script>
 
 </body>
 </html>
