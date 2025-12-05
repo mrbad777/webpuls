@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Discover the Hidden Secret!</title>
 
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y6GHJY7J7"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -28,22 +29,22 @@ gtag('config', 'G-9Y6GHJY7J7');
     position: relative;
   }
 
+  /* Overlay خفيف حتى تظهر الخلفية */
   .overlay {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
-    animation: pulse 4s infinite alternate;
+    background: rgba(0,0,0,0.25);
     pointer-events: none;
   }
 
   @keyframes pulse {
-    0% { background: rgba(0,0,0,0.4); }
-    50% { background: rgba(0,0,0,0.2); }
-    100% { background: rgba(0,0,0,0.4); }
+    0% { background: rgba(0,0,0,0.25); }
+    50% { background: rgba(0,0,0,0.15); }
+    100% { background: rgba(0,0,0,0.25); }
   }
 
-  /* جعل إعلان Adsterra ثابت في الأعلى */
+  /* إعلان Adsterra ثابت أعلى الصفحة */
   .adsterra-fixed {
     position: fixed;
     top: 0;
@@ -52,10 +53,11 @@ gtag('config', 'G-9Y6GHJY7J7');
     z-index: 9999;
     width: 728px;
     text-align: center;
-    background: transparent;
+    background: rgba(255,255,255,0.0);
     margin: 0;
   }
 
+  /* نص وزر قابل للتمرير */
   .text-container {
     position: relative;
     z-index: 2;
@@ -64,7 +66,7 @@ gtag('config', 'G-9Y6GHJY7J7');
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 150px 20px 40px 20px; /* زيادة البادينج من الأعلى لتجنب تداخل الإعلان */
+    padding: 180px 20px 40px 20px;
   }
 
   h1 {
@@ -102,6 +104,7 @@ gtag('config', 'G-9Y6GHJY7J7');
   .button:hover {
     background-color: rgba(255,87,34,1);
   }
+
 </style>
 </head>
 
@@ -129,7 +132,7 @@ atOptions = { key: "c14e076b054eb3826671d248ad3a6b7b", format: "iframe", height:
 <a class="button" href="https://t.crjmpy.com/332046/7809/0?bo=2753,2754,2755,2756&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">Discover Now</a>
 </div>
 
-<!-- موسيقى الخلفية -->
+<!-- موسيقى خلفية رومانسية هادئة -->
 <audio id="bgMusic" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monk_Turner__Fascinoma/Love_Hurts_Revisited/Monk_Turner__Fascinoma_-_01_-_A_Song_For_Her.mp3" autoplay loop></audio>
 
 </body>
