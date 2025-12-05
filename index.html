@@ -24,27 +24,27 @@ gtag('config', 'G-9Y6GHJY7J7');
   }
 
   body {
-    background: url("https://www.verywellmind.com/thmb/oXS0AR7taf9gJza8Yp4XpqEFffw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format/webp/GettyImages-623099664-39bc5622c79e4e12b79d557a64866b27.jpg") no-repeat center top;
+    background: url("https://gateway-v2.crakrevenue.com/crakrevenue-screenshot-collector/2.0/desktop/7809/0.jpg") no-repeat center top;
     background-size: cover;
     position: relative;
   }
 
-  /* Overlay خفيف حتى تظهر الخلفية */
   .overlay {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.4);
+    animation: pulse 4s infinite alternate;
     pointer-events: none;
   }
 
   @keyframes pulse {
-    0% { background: rgba(0,0,0,0.25); }
-    50% { background: rgba(0,0,0,0.15); }
-    100% { background: rgba(0,0,0,0.25); }
+    0% { background: rgba(0,0,0,0.4); }
+    50% { background: rgba(0,0,0,0.2); }
+    100% { background: rgba(0,0,0,0.4); }
   }
 
-  /* إعلان Adsterra ثابت أعلى الصفحة */
+  /* إعلان Adsterra ثابت في الأعلى */
   .adsterra-fixed {
     position: fixed;
     top: 0;
@@ -53,11 +53,10 @@ gtag('config', 'G-9Y6GHJY7J7');
     z-index: 9999;
     width: 728px;
     text-align: center;
-    background: rgba(255,255,255,0.0);
+    background: transparent;
     margin: 0;
   }
 
-  /* نص وزر قابل للتمرير */
   .text-container {
     position: relative;
     z-index: 2;
@@ -66,7 +65,7 @@ gtag('config', 'G-9Y6GHJY7J7');
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 180px 20px 40px 20px;
+    padding: 150px 20px 40px 20px;
   }
 
   h1 {
@@ -104,7 +103,6 @@ gtag('config', 'G-9Y6GHJY7J7');
   .button:hover {
     background-color: rgba(255,87,34,1);
   }
-
 </style>
 </head>
 
