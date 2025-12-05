@@ -15,110 +15,107 @@ gtag('config', 'G-9Y6GHJY7J7');
 </script>
 
 <style>
-  html, body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
+html, body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
-  body {
-    background: url("https://gateway-v2.crakrevenue.com/crakrevenue-screenshot-collector/2.0/desktop/7809/0.jpg") no-repeat center top;
-    background-size: cover;
-    position: relative;
-  }
+body {
+  background: url("https://gateway-v2.crakrevenue.com/crakrevenue-screenshot-collector/2.0/desktop/7809/0.jpg") no-repeat center top;
+  background-size: cover;
+  position: relative;
+}
 
-  .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.4);
-    animation: pulse 4s infinite alternate;
-    pointer-events: none;
-  }
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  animation: pulse 4s infinite alternate;
+  pointer-events: none;
+}
 
-  @keyframes pulse {
-    0% { background: rgba(0,0,0,0.4); }
-    50% { background: rgba(0,0,0,0.2); }
-    100% { background: rgba(0,0,0,0.4); }
-  }
+@keyframes pulse {
+  0% { background: rgba(0,0,0,0.4); }
+  50% { background: rgba(0,0,0,0.2); }
+  100% { background: rgba(0,0,0,0.4); }
+}
 
-  /* نص وزر في منتصف الصفحة */
-  .text-container {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 150px 200px 40px 20px;
-  }
+.text-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 150px 220px 40px 20px; /* مسافة كافية من يمين الصفحة */
+}
 
-  h1 {
-    font-size: 4em;
-    color: #ffcc00;
-    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
-    margin-bottom: 20px;
-    animation: glow 2s infinite alternate;
-  }
+h1 {
+  font-size: 4em;
+  color: #ffcc00;
+  text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+  margin-bottom: 20px;
+  animation: glow 2s infinite alternate;
+}
 
-  p {
-    font-size: 1.8em;
-    text-shadow: 0 0 15px #fff, 0 0 30px #fff;
-    margin-bottom: 40px;
-    animation: glow 2s infinite reverse;
-  }
+p {
+  font-size: 1.8em;
+  text-shadow: 0 0 15px #fff, 0 0 30px #fff;
+  margin-bottom: 40px;
+  animation: glow 2s infinite reverse;
+}
 
-  @keyframes glow {
-    0% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
-    50% { text-shadow: 0 0 25px #ffcc00, 0 0 50px #ffcc00; }
-    100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
-  }
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
+  50% { text-shadow: 0 0 25px #ffcc00, 0 0 50px #ffcc00; }
+  100% { text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
+}
 
-  .button {
-    padding: 20px 50px;
-    font-size: 1.5em;
-    color: #fff;
-    background-color: rgba(255,87,34,0.8);
-    text-decoration: none;
-    border-radius: 10px;
-    text-shadow: 0 0 5px #000;
-    transition: 0.3s;
-  }
+.button {
+  padding: 20px 50px;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: rgba(255,87,34,0.8);
+  text-decoration: none;
+  border-radius: 10px;
+  text-shadow: 0 0 5px #000;
+  transition: 0.3s;
+}
 
-  .button:hover {
-    background-color: rgba(255,87,34,1);
-  }
+.button:hover {
+  background-color: rgba(255,87,34,1);
+}
 
-  /* إعلانات جانبية ذكية */
-  .side-ad {
-    position: fixed;
-    right: 0;
-    width: 160px;
-    text-align: center;
-    z-index: 9999;
-    display: none; /* ستظهر بواسطة الجافاسكربت */
-  }
-
-  .side-ad.top { top: 100px; }
-  .side-ad.bottom { bottom: 150px; }
+/* إعلانات جانبية ذكية */
+.side-ad {
+  position: fixed;
+  right: 0;
+  width: 160px;
+  text-align: center;
+  z-index: 9999;
+}
+.side-ad.top { top: 150px; }
+.side-ad.bottom { bottom: 150px; }
 </style>
 </head>
 
 <body>
 <div class="overlay"></div>
 
-<!-- إعلانات جانبية -->
+<!-- الإعلانات الجانبية فقط -->
 <div class="side-ad top">
 <script async src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"></script>
-<div id="container-f3d91845de0abb12e3246eabd65ee3a1-top"></div>
+<div id="container-top"></div>
 </div>
 
 <div class="side-ad bottom">
 <script async src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"></script>
-<div id="container-f3d91845de0abb12e3246eabd65ee3a1-bottom"></div>
+<div id="container-bottom"></div>
 </div>
 
 <div class="text-container">
@@ -127,32 +124,22 @@ gtag('config', 'G-9Y6GHJY7J7');
 <a class="button" href="https://t.crjmpy.com/332046/7809/0?bo=2753,2754,2755,2756&po=6456&aff_sub5=SF_006OG000004lmDN" target="_blank">Discover Now</a>
 </div>
 
-<!-- موسيقى خلفية رومانسية هادئة -->
-<audio id="bgMusic" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monk_Turner__Fascinoma/Love_Hurts_Revisited/Monk_Turner__Fascinoma_-_01_-_A_Song_For_Her.mp3" autoplay loop></audio>
+<!-- موسيقى هادئة تبدأ عند لمسة المستخدم -->
+<audio id="bgMusic" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Monk_Turner__Fascinoma/Love_Hurts_Revisited/Monk_Turner__Fascinoma_-_01_-_A_Song_For_Her.mp3" loop></audio>
 
 <script>
-// التحكم بظهور الإعلانات الذكية عند التمرير
-window.addEventListener('scroll', function() {
-  const topAd = document.querySelector('.side-ad.top');
-  const bottomAd = document.querySelector('.side-ad.bottom');
-  const scrollY = window.scrollY;
-  const windowHeight = window.innerHeight;
-  const docHeight = document.body.scrollHeight;
-
-  // الإعلان العلوي يظهر عند منتصف الصفحة
-  if(scrollY > windowHeight / 2) {
-    topAd.style.display = 'block';
-  } else {
-    topAd.style.display = 'none';
+// تشغيل الموسيقى عند لمسة الشاشة أو نقرة الماوس
+function playMusic() {
+  const music = document.getElementById('bgMusic');
+  if(music.paused) {
+    music.volume = 0.2; // هادئ جدًا
+    music.play();
   }
-
-  // الإعلان السفلي يختفي عند الاقتراب من نهاية الصفحة (الزر)
-  if(scrollY + windowHeight < docHeight - 300) {
-    bottomAd.style.display = 'block';
-  } else {
-    bottomAd.style.display = 'none';
-  }
-});
+  document.removeEventListener('click', playMusic);
+  document.removeEventListener('touchstart', playMusic);
+}
+document.addEventListener('click', playMusic);
+document.addEventListener('touchstart', playMusic);
 </script>
 
 </body>
