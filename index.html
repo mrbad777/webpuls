@@ -1,170 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discover the Hidden Secret!</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover the Hidden Secret!</title>
 
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-9Y6GHJY7J7"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-9Y6GHJY7J7");
-    </script>
-
-    <style>
-      html,
-      body {
+<style>
+    body {
         margin: 0;
+        padding: 0;
+        background: #000;
         font-family: Arial, sans-serif;
         color: #fff;
-        overflow-x: hidden;
-        overflow-y: auto;
-        min-height: 100vh;
-        background: url("https://gateway-v2.crakrevenue.com/crakrevenue-screenshot-collector/2.0/desktop/7809/0.jpg")
-          no-repeat center top;
-        background-size: cover;
-        position: relative;
-      }
+    }
 
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
+    /* شبكة الصور */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .gallery img {
         width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        pointer-events: none;
-      }
-
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 150px 20px 20px 20px;
-        text-align: center;
-        position: relative;
-        z-index: 2;
-      }
-
-      h1 {
-        font-size: 4em;
-        color: #ffcc00;
-        text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
-        margin-bottom: 20px;
-        animation: glow 2s infinite alternate;
-      }
-
-      p {
-        font-size: 1.8em;
-        text-shadow: 0 0 15px #fff, 0 0 30px #fff;
-        margin-bottom: 40px;
-        animation: glow 2s infinite reverse;
-      }
-
-      @keyframes glow {
-        0% {
-          text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
-        }
-        50% {
-          text-shadow: 0 0 25px #ffcc00, 0 0 50px #ffcc00;
-        }
-        100% {
-          text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
-        }
-      }
-
-      .button {
-        padding: 20px 50px;
-        font-size: 1.5em;
-        color: #fff;
-        background-color: rgba(255, 87, 34, 0.8);
-        text-decoration: none;
+        height: 240px;
+        object-fit: cover;
         border-radius: 10px;
-        text-shadow: 0 0 5px #000;
-        transition: 0.3s;
-      }
+        animation: zoomin 2s ease-in-out;
+        position: relative;
+        box-shadow: 0 0 25px rgba(255, 80, 0, 0.7), 
+                    0 0 50px rgba(255, 50, 0, 0.4);
+        transition: 0.5s;
+    }
 
-      .button:hover {
-        background-color: rgba(255, 87, 34, 1);
-      }
+    /* تأثير Hover على الصور */
+    .gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 40px rgba(255, 100, 0, 1), 
+                    0 0 80px rgba(255, 50, 0, 0.8);
+    }
 
-      /* إعلان جانبي */
-      .ad-side {
-        position: fixed;
-        top: 150px;
-        right: 0;
-        width: 120px;
-        z-index: 9999;
-      }
+    /* أنيميشن ظهور + تكبير */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
 
-      /* إعلان أسفل الزر */
-      .ad-below {
-        width: 100%;
-        margin-top: 30px;
+    @keyframes zoomin {
+        from {transform: scale(0.8);}
+        to {transform: scale(1);}
+    }
+
+    /* قسم المحتوى السفلي */
+    .content {
         text-align: center;
-      }
-    </style>
-  </head>
+        padding: 100px 20px;
+        background: rgba(0,0,0,0.85);
+        margin-top: 40px;
+    }
 
-  <body>
-    <div class="overlay"></div>
+    h1 {
+        font-size: 3em;
+        color: #ffcc00;
+        text-shadow: 0 0 15px #ffcc00, 0 0 40px #ffcc00;
+        animation: glow 2s infinite alternate;
+    }
 
-    <!-- المحتوى المركزي -->
-    <div class="container">
-      <h1>Discover the Hidden Secret!</h1>
+    @keyframes glow {
+        0% { text-shadow: 0 0 10px #ffcc00; }
+        100% { text-shadow: 0 0 35px #ffcc00; }
+    }
 
-      <a
-        class="button"
-        href="https://t.crjmpy.com/332046/7809/0?bo=2753,2754,2755,2756&po=6456&aff_sub5=SF_006OG000004lmDN"
-        target="_blank"
-        >Discover Now</a
-      >
+    .button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 20px 50px;
+        background: #ff5722;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 1.5em;
+        text-decoration: none;
+        transition: 0.3s;
+    }
 
-      <!-- إعلان أسفل الزر -->
-      <div class="ad-below">
-        <script
-          async="async"
-          data-cfasync="false"
-          src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"
-        ></script>
+    .button:hover {
+        background: #ff784e;
+    }
+
+    .ad-below {
+        margin-top: 40px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 شبكة الصور 12 صورة -->
+<div class="gallery">
+    <img src="1.jpg">
+    <img src="2.jpg">
+    <img src="3.jpg">
+    <img src="4.jpg">
+    <img src="5.jpg">
+    <img src="6.jpg">
+    <img src="7.jpg">
+    <img src="8.jpg">
+    <img src="9.jpg">
+    <img src="10.jpg">
+    <img src="11.jpg">
+    <img src="12.jpg">
+</div>
+
+<!-- ▼▼▼ أسفل الصفحة ▼▼▼ -->
+<div class="content">
+    <h1>Join us now !</h1>
+
+    <a class="button" 
+       href="https://t.crjmpy.com/332046/7809/0?bo=2753,2754,2755,2756&po=6456&aff_sub5=SF_006OG000004lmDN" 
+       target="_blank">
+       Discover Now
+    </a>
+
+    <!-- إعلان أسفل -->
+    <div class="ad-below">
+        <script async data-cfasync="false" src="//pl28197039.effectivegatecpm.com/f3d91845de0abb12e3246eabd65ee3a1/invoke.js"></script>
         <div id="container-f3d91845de0abb12e3246eabd65ee3a1"></div>
-      </div>
     </div>
+</div>
 
-    <!-- إعلان جانبي أيمن -->
-    <div class="ad-side">
-      <script type="text/javascript">
-        atOptions = {
-          key: "c14e076b054eb3826671d248ad3a6b7b",
-          format: "iframe",
-          height: 600,
-          width: 120,
-          params: {},
-        };
-      </script>
-      <script
-        type="text/javascript"
-        src="//www.highperformanceformat.com/c14e076b054eb3826671d248ad3a6b7b/invoke.js"
-      ></script>
-    </div>
+<!-- موسيقى -->
+<audio id="bgMusic" src="0.mp3" loop></audio>
+<script>
+    document.body.addEventListener("click", function() {
+        document.getElementById("bgMusic").play();
+    }, { once: true });
+</script>
 
-    <!-- موسيقى خلفية هادئة تبدأ عند أول لمسة -->
-    <audio id="bgMusic" src="0.mp3" loop></audio>
-    <script>
-      document.body.addEventListener(
-        "click",
-        function () {
-          document.getElementById("bgMusic").play();
-        },
-        { once: true }
-      );
-    </script>
-  </body>
+</body>
 </html>
