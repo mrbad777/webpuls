@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Discover the Hidden Secret!</title>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9Y6GHJY7J7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9Y6GHJY7J7');
+</script>
+
 <style>
     body {
         margin: 0;
@@ -131,12 +141,22 @@
     </div>
 </div>
 
-<!-- موسيقى -->
+<!-- 🎯 تتبع الضغطات على الزر بطرق GA4 -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector(".button");
 
+    if (button) {
+        button.addEventListener("click", function () {
+            gtag('event', 'button_click', {
+                event_category: 'engagement',
+                event_label: 'discover_button',
+                value: 1
+            });
+        });
+    }
+});
+</script>
 
 </body>
 </html>
-
-
-
-
